@@ -14,5 +14,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
 
 [![Volodymyr Pivtoranis profile views](https://u8views.com/api/v1/github/profiles/98724271/views/day-week-month-total-count.svg)](https://u8views.com/github/PivtoranisV)
