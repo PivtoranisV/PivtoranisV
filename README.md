@@ -26,9 +26,12 @@ Here are some ideas to get you started:
 </p>
 
 ## 🏆 My Stats:
+<img alt="Volodymyr's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=pivtoranisv&show_icons=true&theme=transparent"/> 
+
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pivtoranisv&layout=compact&theme=dark) 
 
+## Profile views counter
 [![Volodymyr Pivtoranis profile views](https://u8views.com/api/v1/github/profiles/98724271/views/day-week-month-total-count.svg)](https://u8views.com/github/PivtoranisV)
 
 </div>
