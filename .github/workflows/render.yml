@@ -1,0 +1,39 @@
+name: Render profile card
+
+on:
+  schedule:
+    - cron: "17 4 * * *"   # daily, 04:17 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [profile.yml, src/**, .github/workflows/render.yml]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: render
+  cancel-in-progress: true
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Ruby ships with the runner image; the script uses only the stdlib.
+      - name: Render SVGs
+        run: ruby src/render.rb
+        env:
+          # Optional: add a PROFILE_TOKEN secret (classic PAT, read:user) to include
+          # private contributions; otherwise the built-in token is used.
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN || github.token }}
+
+      - name: Commit if changed
+        run: |
+          git diff --quiet -- assets && exit 0
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git commit -m "chore: re-render profile card"
+          git push

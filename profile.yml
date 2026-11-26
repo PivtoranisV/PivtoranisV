@@ -1,0 +1,8 @@
+# Everything printed in the console card. Edit, push, and the workflow re-renders it.
+login: PivtoranisV
+name: Volodymyr Pivtoranis
+city: Lviv, Ukraine
+role: Full-Stack Developer
+stack: [ruby, rails, react, javascript, postgresql]
+now: "shipping Rails apps & teaching AI agents to code"
+motto: "If you can dream it, you can do it."
